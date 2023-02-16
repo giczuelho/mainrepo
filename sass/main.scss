@@ -1,0 +1,439 @@
+@import 'colors';
+@import 'animations';
+@import 'components';
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	scroll-padding-top: 82px;
+}
+
+body {
+	position: relative;
+	font-family: 'Montserrat', sans-serif;
+	background-color: $bg-color;
+}
+
+h2 {
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.underline {
+	margin: 0 auto 40px;
+	width: 400px;
+	height: 3px;
+	background-color: $main-color;
+}
+
+.blue-text {
+	color: $main-color;
+}
+
+.shadow-bg {
+	background-color: rgba(0, 0, 0, 0.6);
+}
+
+.shadow-bg2 {
+	background-color: rgb(37, 15, 0);
+}
+
+// nawigacja ============================================================================
+nav {
+	text-transform: uppercase;
+	transition: background-color 0.6s;
+	z-index: 1;
+
+	a,
+	i {
+		color: $white;
+		font-size: 18px;
+		transition: color 0.3s;
+	}
+
+	a:hover {
+		color: $main-color;
+	}
+
+	.fa-bars {
+		padding: 10px;
+	}
+
+	.navbar-brand {
+		font-weight: bold;
+	}
+
+	.active {
+		color: $main-color;
+	}
+}
+
+// header ============================================================================
+header {
+	color: #fff;
+	min-height: 100vh;
+
+	h1 {
+		font-size: 30px;
+		text-transform: uppercase;
+	}
+
+	p {
+		font-size: 14px;
+	}
+
+	.hero-img {
+		position: relative;
+		height: 100vh;
+		background-image: url('../img/hero-small.jpg');
+		background-position: center;
+		background-size: cover;
+		background-attachment: fixed;
+		z-index: 0;
+	}
+
+	.hero-shadow {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0, 0, 0, 0.8);
+		z-index: -10;
+	}
+
+	.hero-text {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		height: 100%;
+		padding: 10px;
+		text-align: center;
+		z-index: 5;
+
+		h1 {
+			font-size: 80px;
+		}
+
+		p {
+			font-size: 20px;
+		}
+	}
+
+	.btn-outline-light {
+		position: relative;
+		margin: 50px 20px;
+		padding: 10px 30px;
+		text-transform: uppercase;
+		font-size: 19px;
+		border-radius: 12px;
+	}
+
+	.btn-outline-light:hover {
+		background-color: #f86f13;
+		color: #fff;
+		border: 1px solid rgb(248, 111, 19);
+	}
+
+	.fa-angles-down {
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+		bottom: 20px;
+		font-size: 30px;
+		color: $white;
+	}
+}
+
+// o mnie ============================================================================
+.aboutme {
+	i {
+		margin-top: 20px;
+		font-size: 30px;
+	}
+
+	.aboutme-card-title {
+		font-size: 18px;
+		text-transform: uppercase;
+	}
+
+	.aboutme-card-text {
+		font-size: 14px;
+	}
+
+	.aboumes-hover {
+		transition: color 0.3s;
+	}
+
+	.aboutme-hover:hover {
+		color: $main-color;
+	}
+
+	.mypers {
+		text-align: center;
+		padding-bottom: 15px;
+	}
+}
+
+.aboutme-hero {
+	position: relative;
+	height: 550px;
+	background-image: url('../img/photo1_big.jpg');
+	background-position: center;
+	background-attachment: fixed;
+	background-size: cover;
+	color: $light-gray;
+	z-index: 0;
+
+	p {
+		text-align: center;
+		font-size: 20px;
+	}
+
+	.aboutme-shadow {
+		position: absolute;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0, 0, 0, 0.6);
+		z-index: -1;
+	}
+
+	.aboutme-hero-item {
+		margin: 10px 0;
+		padding: 25px 10px;
+
+		.aboutme-hero-text {
+			width: 100px;
+		}
+
+		i {
+			font-size: 80px;
+			color: $light-gray;
+			transition: color 0.2s;
+		}
+
+		i:hover {
+			color: $main-color;
+		}
+
+		.aboutme-hero-title {
+			font-size: 24px;
+		}
+	}
+}
+
+// portfoilio ============================================================================
+.portfolio {
+	.card {
+		position: relative;
+		margin: 20px 40px;
+		width: 250px;
+		height: 300px;
+		perspective: 800px;
+		border: none;
+	}
+
+	.img {
+		width: 100%;
+		height: 100%;
+		background-position: center;
+		background-size: cover;
+		border-radius: 15px;
+		transition: 0.8s;
+	}
+
+	.one {
+		background-image: url(../img/phone-wallpaper-4965456_1920.jpg);
+	}
+
+	.two {
+		background-image: url(../img/valley-4646114_1920.jpg);
+	}
+
+	.three {
+		background-image: url(../img/phone-wallpaper-4965456_1920.jpg);
+	}
+	.four {
+		background-image: url(../img/valley-4646114_1920.jpg);
+	}
+
+	.five {
+		background-image: url(../img/phone-wallpaper-4965456_1920.jpg);
+	}
+
+	.six {
+		background-image: url(../img/valley-4646114_1920.jpg);
+	}
+
+	.seven {
+		background-image: url(../img/phone-wallpaper-4965456_1920.jpg);
+	}
+
+	.eight {
+		background-image: url(../img/valley-4646114_1920.jpg);
+	}
+
+	.text {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		padding: 30px;
+		border-radius: 15px;
+		text-align: center;
+		background-image: linear-gradient(315deg, #f86f13 0%, #ffd5b9 74%);
+		transition: 0.8s;
+		opacity: 0;
+		// color: #fff;
+	}
+
+	h3 {
+		margin-top: 70px;
+		margin-bottom: 20px;
+		text-transform: uppercase;
+	}
+
+	.text-one {
+		transform: rotateY(-180deg);
+	}
+
+	.text-two {
+		transform: rotateY(-180deg);
+	}
+	.text-three {
+		transform: rotateY(-180deg);
+	}
+	.text-four {
+		transform: rotateY(-180deg);
+	}
+	.text-five {
+		transform: rotateY(-180deg);
+	}
+	.text-six {
+		transform: rotateY(-180deg);
+	}
+	.text-seven {
+		transform: rotateY(-180deg);
+	}
+	.text-eight {
+		transform: rotateY(-180deg);
+	}
+
+	.card:hover .text {
+		transform: rotate(0);
+		opacity: 1;
+	}
+
+	.card:hover .one {
+		transform: rotateY(-180deg);
+	}
+
+	.card:hover .two {
+		transform: rotateY(-180deg);
+	}
+
+	.card:hover .three {
+		transform: rotateY(-180deg);
+	}
+	.card:hover .four {
+		transform: rotateY(-180deg);
+	}
+	.card:hover .five {
+		transform: rotateY(-180deg);
+	}
+	.card:hover .six {
+		transform: rotateY(-180deg);
+	}
+	.card:hover .seven {
+		transform: rotateY(-180deg);
+	}
+	.card:hover .eight {
+		transform: rotateY(-180deg);
+	}
+}
+
+// kontakt ============================================================================
+.contact {
+	position: relative;
+	background-image: url('../img/hero-big.jpg');
+	background-position: bottom;
+	background-attachment: fixed;
+	background-size: cover;
+	z-index: 0;
+
+	h2 {
+		color: $light-gray;
+		// font-weight: bold;
+	}
+
+	.contact-shadow {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(37, 15, 0, 0.8);
+		top: 0;
+		z-index: -5;
+	}
+
+	div {
+		color: #fff;
+
+		h3 {
+			text-transform: uppercase;
+			font-size: 40px;
+		}
+
+		p {
+			color: $light-gray;
+		}
+	}
+}
+
+// @media (min-width: 375px) {
+// 	header {
+// 		h1 {
+// 			font-size: 36px;
+// 		}
+
+// 		p {
+// 			font-size: 16px;
+// 		}
+// 	}
+// }
+
+// @media (min-width: 768px) {
+// 	header {
+// 		h1 {
+// 			font-size: 42px;
+// 		}
+
+// 		p {
+// 			font-size: 20px;
+// 		}
+// 	}
+// }
+
+// @media (min-width: 992px) {
+// 	nav {
+// 		height: 82px;
+// 	}
+
+// 	// .aboutme-hero {
+// 	// 	// background-image: url('../img/photo1_big.jpg');
+// 	// }
+// }
+
+// @media (min-width: 1200px) {
+// 	header {
+// 		.hero-img {
+// 			background-image: url('../img/hero-big.jpg');
+// 		}
+// 	}
+// }
